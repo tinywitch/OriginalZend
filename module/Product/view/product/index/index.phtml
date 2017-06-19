@@ -1,0 +1,27 @@
+<table width="98%" align='center' cellspacing="0" cellpadding="5px">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Price</td>
+    </tr>
+    <?php
+    $i = 0;
+    foreach ($products as $product)
+    {
+        if ($i % 2 == 0)
+        {
+            echo '<tr bgcolor="#FFE7D5">';
+        }
+        else
+        {
+            echo '<tr>';
+        }
+        echo
+            '<td width="150px">' . $product['id'] . '</td>';
+        echo
+            '<td>' . $product['name'] . '</td>';
+        echo '<td>' . $product['price'] . '</td>';
+        $i++;
+    }
+    ?>
+</table>
